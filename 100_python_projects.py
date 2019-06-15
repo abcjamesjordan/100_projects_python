@@ -42,7 +42,7 @@ def longest_alphabetical_string(input_string):
 def guess_number_game(low, high):
     print("Please think of a number between " + str(low) + " and " + str(high) + ": ")    
     while True:
-        guess = round((high + low)/2)
+        guess = (high + low)//2
         print("Is your number " + str(guess) + "?")
         a = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. ")
         if a == 'c':
@@ -53,7 +53,7 @@ def guess_number_game(low, high):
         elif a == 'l':
             low = guess
         else:
-            print("Please try again.")
+            print("Sorry, I did not understand your input.")
 
 """Check.io Functions"""
 def all_the_same(input_data):
@@ -147,7 +147,7 @@ def main():
 #    print("The number of words is: " + str(count_words_in_string("this is my string")))
 #    print("The number of words in the file is: " + str(count_words_in_txt_file("string_of_words.txt")))
 #    print("The Fibbonacci Sequence of 10 is: " + str(fibonacci_sequence(10)))
-#    guess_number_game(0, 100)
+    guess_number_game(0, 100)
     
 if __name__ == '__main__':
     main()
