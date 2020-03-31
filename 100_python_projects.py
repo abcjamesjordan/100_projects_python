@@ -9,6 +9,8 @@ mydata2 = [1, 8, 2, 3, 4, 5, 6]
 #A = np.array([1,2,3],[4,5,6])
 #print(A)
 
+# This is comment to test Github on 20200331
+
 """Other Functions"""
 # https://www.youtube.com/watch?v=cdCeU8DJvPM
 def find_missing(input_1, input_2):
@@ -40,14 +42,14 @@ def longest_alphabetical_string(input_string):
     return winner
 
 def guess_number_game(low, high):
-    print("Please think of a number between " + str(low) + " and " + str(high) + ": ")    
+    print("Please think of a number between " + str(low) + " and " + str(high) + ": ")
     while True:
         guess = (high + low)//2
         print("Is your number " + str(guess) + "?")
         a = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. ")
         if a == 'c':
             print("Game over. Your secret number is: " + str(guess))
-            break        
+            break
         elif a == 'h':
             high = guess
         elif a == 'l':
@@ -110,7 +112,7 @@ def count_words_in_string(input_string):
             pass
     counter+=1
     return counter
-    
+
 def count_words_in_txt_file(file_name):
     counter = 0
     myfile = open(file_name, "r")
@@ -148,68 +150,6 @@ def main():
 #    print("The number of words in the file is: " + str(count_words_in_txt_file("string_of_words.txt")))
 #    print("The Fibbonacci Sequence of 10 is: " + str(fibonacci_sequence(10)))
     guess_number_game(0, 100)
-    
+
 if __name__ == '__main__':
     main()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
