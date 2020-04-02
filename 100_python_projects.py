@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # imports
 # reminder to add required imputs to requirements.txt file_name
@@ -17,6 +17,16 @@ def find_missing(input_1, input_2):
     sum1 = sum(input_1)
     sum2 = sum(input_2)
     return sum1 - sum2
+
+# Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,
+# between 2000 and 3200 (both included).
+# The numbers obtained should be printed in a comma-separated sequence on a single line.
+def find_numbers(low, high):
+    x = [];
+    for i in range(low, high):
+        if i % 7 == 0 and i % 5 != 0:
+            x.append(i)
+    return x
 
 """MIT Python"""
 # https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2019/course/
@@ -149,7 +159,8 @@ def main():
 #    print("The number of words is: " + str(count_words_in_string("this is my string")))
 #    print("The number of words in the file is: " + str(count_words_in_txt_file("string_of_words.txt")))
 #    print("The Fibbonacci Sequence of 10 is: " + str(fibonacci_sequence(10)))
-    guess_number_game(0, 100)
+#    guess_number_game(0, 100)
+    print(find_numbers(2000, 3200))
 
 if __name__ == '__main__':
     main()
