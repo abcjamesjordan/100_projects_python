@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
 # imports
+# reminder to add required imputs to requirements.txt file_name
 import numpy as np
+import matplotlib as plt # need to add to requirements.txt
 
 # Global Variables
 mydata = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -147,7 +149,7 @@ def main():
 #    print("The number of words is: " + str(count_words_in_string("this is my string")))
 #    print("The number of words in the file is: " + str(count_words_in_txt_file("string_of_words.txt")))
 #    print("The Fibbonacci Sequence of 10 is: " + str(fibonacci_sequence(10)))
-#    guess_number_game(0, 100)
+    guess_number_game(0, 100)
 
 if __name__ == '__main__':
     main()
