@@ -28,6 +28,16 @@ def find_numbers(low, high):
             x.append(i)
     return x
 
+# Tile floor cost calculator using user input
+def tile_calc():
+    # cost assumes cost per square foot
+    # user input is assumed to be in feet
+    height = input("Please enter height in feet: ")
+    width = input("Please enter width in feet: ")
+    cost = input("Please enter cost per square foot: ")
+    total_cost = height * width * cost
+    return total_cost
+
 """MIT Python"""
 # https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2019/course/
 def longest_alphabetical_string(input_string):
@@ -158,9 +168,10 @@ def main():
 #    print("Palidrome check returns: " + str(check_if_palindrome('abba')))
 #    print("The number of words is: " + str(count_words_in_string("this is my string")))
 #    print("The number of words in the file is: " + str(count_words_in_txt_file("string_of_words.txt")))
-#    print("The Fibbonacci Sequence of 10 is: " + str(fibonacci_sequence(10)))
+    print("The Fibbonacci Sequence of 10 is: " + str(fibonacci_sequence(10)))
 #    guess_number_game(0, 100)
-    print(find_numbers(2000, 3200))
+#    print(find_numbers(2000, 3200))
+#    print(tile_calc())
 
 if __name__ == '__main__':
     main()
