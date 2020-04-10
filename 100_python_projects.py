@@ -4,10 +4,13 @@
 # reminder to add required imputs to requirements.txt file_name
 import numpy as np
 import matplotlib as plt # need to add to requirements.txt
+import random
+import math
 
 # Global Variables
 mydata = [1, 2, 3, 4, 5, 6, 7, 8]
 mydata2 = [1, 8, 2, 3, 4, 5, 6]
+myrand = [random.randint(0, 100) for x in range(1, 11)]
 #A = np.array([1,2,3],[4,5,6])
 #print(A)
 
@@ -33,10 +36,74 @@ def tile_calc():
     # cost assumes cost per square foot
     # user input is assumed to be in feet
     height = input("Please enter height in feet: ")
+    while True:
+        try:
+            height = int(height)
+            break
+        except:
+            print("Please input a positive number for the height")
+            height = input()
     width = input("Please enter width in feet: ")
+    while True:
+        try:
+            width = int(width)
+            break
+        except:
+            print("Please input a positive number for the width")
+            width = input()
     cost = input("Please enter cost per square foot: ")
+    while True:
+        try:
+            cost = int(cost)
+            break
+        except:
+            print("Please input a positive number for the cost")
+            cost = input()
     total_cost = height * width * cost
     return total_cost
+
+# Collatz Conjecture: Start with a number n > 1. Find the number of steps it
+# takes to reach one using the following process: If n is even, divide it by 2.
+# If n is odd, multiply it by 3 and add 1.
+def my_collatz_conjecture():
+    print("Please input your positive integer number for the Collatz Conjecture function")
+    mynum = input()
+    while True:
+        try:
+            mynum = int(mynum) #AND mynum > 1
+            break
+        except:
+            print("Please insert a positive integer greater than 1...")
+            mynum = input()
+
+    mycounter = 0
+    while mynum > 1:
+        if mynum % 2 == 0:
+            mynum /= 2
+            mycounter += 1
+            print(mynum)
+        elif mynum % 2 != 0:
+            mynum = mynum * 3 + 1
+            mycounter += 1
+            print(mynum)
+        else:
+            print("ERROR")
+
+    return mycounter
+
+# Merge Sort
+def my_merge_sort(x):
+    x_len = math.ceil(len(x)/2)
+    x1 = x[:x_len]
+    x2 = x[x_len:]
+    # incomplete continue here
+
+
+
+    return
+
+
+
 
 """MIT Python"""
 # https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2019/course/
@@ -158,20 +225,18 @@ def fibonacci_sequence(input):
     return fib_tracker
 
 
-def main():
-#    print("The Missing Number is: " + str(find_missing(mydata, mydata2)))
-#    print("The Longest String is: " + str(longest_alphabetical_string("azcbobobegghakl")))
-#    print("All the same returns: " + str(all_the_same(mydata)))
-#    print("Your data reversed it: " + str(reverse_some_data(mydata)))
-#    print("Pig Latin is: " + str(pig_latin("alphabet")))
-#    print("The number of vowels is " + str(count_vowels("alphabet")))
-#    print("Palidrome check returns: " + str(check_if_palindrome('abba')))
-#    print("The number of words is: " + str(count_words_in_string("this is my string")))
-#    print("The number of words in the file is: " + str(count_words_in_txt_file("string_of_words.txt")))
-    print("The Fibbonacci Sequence of 10 is: " + str(fibonacci_sequence(10)))
-#    guess_number_game(0, 100)
-#    print(find_numbers(2000, 3200))
-#    print(tile_calc())
-
-if __name__ == '__main__':
-    main()
+# print("The Missing Number is: " + str(find_missing(mydata, mydata2)))
+# print("The Longest String is: " + str(longest_alphabetical_string("azcbobobegghakl")))
+# print("All the same returns: " + str(all_the_same(mydata)))
+# print("Your data reversed it: " + str(reverse_some_data(mydata)))
+# print("Pig Latin is: " + str(pig_latin("alphabet")))
+# print("The number of vowels is " + str(count_vowels("alphabet")))
+# print("Palidrome check returns: " + str(check_if_palindrome('abba')))
+# print("The number of words is: " + str(count_words_in_string("this is my string")))
+# print("The number of words in the file is: " + str(count_words_in_txt_file("string_of_words.txt")))
+# print("The Fibbonacci Sequence of 10 is: " + str(fibonacci_sequence(10)))
+# guess_number_game(0, 100)
+# print(find_numbers(2000, 3200))
+# print(tile_calc())
+# print(my_collatz_conjecture())
+my_merge_sort(myrand)
